@@ -12,7 +12,6 @@ import jsons from "../assets/json.png";
 import visuals from "../assets/visual.png";
 import github from "../assets/Githubb.png";
 import npms from "../assets/npm.png";
-
 import Header from "../layout/header";
 import Footer from "../layout/footer";
 
