@@ -1,8 +1,6 @@
 import React from "react";
-
 import backgroundImage from "../assets/background.jpg";
-
-import aboutright from "../assets/aboutright.png"; // apni image ka path
+import aboutright from "../assets/aboutright.png";
 import { FaHandPointRight } from "react-icons/fa";
 import html from "../assets/htm.png";
 import csss from "../assets/css.png";
@@ -15,7 +13,6 @@ import visuals from "../assets/visual.png";
 import github from "../assets/Githubb.png";
 import npms from "../assets/npm.png";
 
-// ✅ Import Header & Footer
 import Header from "../layout/header";
 import Footer from "../layout/footer";
 
@@ -25,24 +22,24 @@ export default function About() {
       className="relative text-white bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
+      <Header />
 
-<Header/>
       {/* 🌟 About Section */}
       <section
         id="about"
-        className="grid grid-cols-1 md:grid-cols-2 items-center px-10 md:px-20 py-12 gap-10 ml-12"
+        className="grid grid-cols-1 md:grid-cols-2 items-center px-6 sm:px-10 md:px-20 py-12 gap-10"
       >
         {/* Left - Text Section */}
         <div className="text-left">
           <h2
-            className="text-4xl font-semibold text-white mb-2 ml-30"
+            className="text-3xl sm:text-4xl font-semibold text-white mb-2"
             style={{ fontFamily: "Great Vibes, cursive" }}
           >
             Know <span className="text-white font-bold">Who</span>{" "}
             <span className="text-teal-400 font-bold">I’M</span>
           </h2>
 
-          <p className="max-w-2xl text-lg mt-6 leading-relaxed text-white">
+          <p className="max-w-2xl text-base sm:text-lg mt-6 leading-relaxed text-white">
             I’M{" "}
             <span className="text-teal-400 font-bold text-xl">
               Muhammad Usman Siddiqui
@@ -59,54 +56,40 @@ export default function About() {
             appealing web applications.
           </p>
 
-          <p className="max-w-2xl text-lg mt-4 leading-relaxed text-white">
+          <p className="max-w-2xl text-base sm:text-lg mt-4 leading-relaxed text-white">
             I’m skilled in{" "}
             <span className="text-white">
               React.js, Vite, HTML, CSS, JavaScript, and TailwindCSS
             </span>
             , with a strong focus on clean code and modern UI design. I
             graduated with a Bachelor of Science in Computer Science from{" "}
-            <span className="text-white">Iqra University (Airport Campus)</span>
-            .
+            <span className="text-white">Iqra University (Airport Campus)</span>.
           </p>
 
-          <div className="max-w-2xl mt-6 text-left text-lg text-white">
+          <div className="max-w-2xl mt-6 text-left text-base sm:text-lg text-white">
             <p className="text-teal-400 font-bold mb-2 text-xl">
               Apart from my professional work, I am passionate about:
             </p>
-            <ul className="space-y-2 text-gray-200 ml-10">
-              <li className="flex items-center gap-2">
-                <FaHandPointRight color="white" size={20} />
-                <span>Exploring modern frontend frameworks</span>
-              </li>
-
-              <li className="flex items-center gap-2">
-                <FaHandPointRight color="white" size={20} />
-                <span>
-                  Building high-performance web apps with React and Vite
-                </span>
-              </li>
-
-              <li className="flex items-center gap-2">
-                <FaHandPointRight color="white" size={20} />
-                <span>Creating engaging and user-friendly interfaces</span>
-              </li>
-
-              <li className="flex items-center gap-2">
-                <FaHandPointRight color="white" size={20} />
-                <span>
-                  Continuously learning new technologies to enhance my
-                  development workflow
-                </span>
-              </li>
+            <ul className="space-y-2 text-gray-200 ml-6 sm:ml-10">
+              {[
+                "Exploring modern frontend frameworks",
+                "Building high-performance web apps with React and Vite",
+                "Creating engaging and user-friendly interfaces",
+                "Continuously learning new technologies to enhance my workflow",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <FaHandPointRight color="white" size={18} />
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <p className="text-teal-400 text-2xl italic font-bold mt-6 ml-12 text-center">
+          <p className="text-teal-400 text-xl sm:text-2xl italic font-bold mt-6 text-center">
             "Code with creativity, design with purpose, and build with passion!"
           </p>
 
-          <h3 className="text-lg mt-2 font-bold text-white ml-12 text-center">
+          <h3 className="text-base sm:text-lg mt-2 font-bold text-white text-center">
             --Muhammad Usman Siddiqui
           </h3>
         </div>
@@ -116,156 +99,59 @@ export default function About() {
           <img
             src={aboutright}
             alt="About Usman"
-            className="rounded-2xl shadow-lg max-w-full w-full object-contain"
+            className="rounded-2xl shadow-lg max-w-full w-3/4 sm:w-2/3 md:w-full object-contain"
           />
         </div>
       </section>
+
       {/* Professional Skill Set Section */}
-      <section className="py-16 text-center">
-        <h2 className="text-5xl font-bold mb-10">
+      <section className="py-16 text-center px-4 sm:px-10">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10">
           <span className="text-white">Professional </span>
           <span className="text-teal-400">SkillSet</span>
         </h2>
 
-        {/* Skill Set Boxes - 2 Rows with 3 Boxes Centered Each */}
-        <div className="flex flex-col items-center gap-10 px-10 md:px-20">
-          {/* 🔹 Row 1 */}
-          <div className="flex flex-wrap justify-center gap-8">
-            {/* Box 1 */}
-            <div className="relative bg-transparent border-2 border-transparent hover:border-white hover:scale-105 transition-all duration-300 rounded-2xl shadow-lg p-10 flex flex-col items-center justify-center overflow-hidden">
-              <div className="relative w-48 h-48 flex items-center justify-center">
-                <img
-                  src={reacts}
-                  alt="React"
-                  className="w-40 h-40 object-contain transition-all duration-500 ease-in-out hover:scale-125 hover:brightness-200"
-                />
-              </div>
+        {/* Skills Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 justify-items-center">
+          {[reacts, html, csss, tailwand, javascript, vite].map((img, i) => (
+            <div
+              key={i}
+              className="bg-transparent border-2 border-transparent hover:border-white hover:scale-105 transition-all duration-300 rounded-2xl shadow-lg p-6 sm:p-10 flex items-center justify-center"
+            >
+              <img
+                src={img}
+                alt="Skill"
+                className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 object-contain transition-all duration-500 ease-in-out hover:scale-125 hover:brightness-200"
+              />
             </div>
-
-            {/* Box 2 */}
-            <div className="relative bg-transparent border-2 border-transparent hover:border-white hover:scale-105 transition-all duration-300 rounded-2xl shadow-lg p-10 flex flex-col items-center justify-center overflow-hidden">
-              <div className="relative w-48 h-48 flex items-center justify-center">
-                <img
-                  src={html}
-                  alt="HTML5"
-                  className="w-40 h-40 object-contain transition-all duration-500 ease-in-out hover:scale-125 hover:brightness-200"
-                />
-              </div>
-            </div>
-
-            {/* Box 3 */}
-            <div className="relative bg-transparent border-2 border-transparent hover:border-white hover:scale-105 transition-all duration-300 rounded-2xl shadow-lg p-10 flex flex-col items-center justify-center overflow-hidden">
-              <div className="relative w-48 h-48 flex items-center justify-center">
-                <img
-                  src={csss}
-                  alt="CSS3"
-                  className="w-40 h-40 object-contain transition-all duration-500 ease-in-out hover:scale-125 hover:brightness-200"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* 🔹 Row 2 */}
-          <div className="flex flex-wrap justify-center gap-8">
-            {/* Box 4 */}
-            <div className="relative bg-transparent border-2 border-transparent hover:border-white hover:scale-105 transition-all duration-300 rounded-2xl shadow-lg p-10 flex flex-col items-center justify-center overflow-hidden">
-              <div className="relative w-48 h-48 flex items-center justify-center">
-                <img
-                  src={tailwand}
-                  alt="Tailwind"
-                  className="w-40 h-40 object-contain transition-all duration-500 ease-in-out hover:scale-125 hover:brightness-200"
-                />
-              </div>
-            </div>
-
-            {/* Box 5 */}
-            <div className="relative bg-transparent border-2 border-transparent hover:border-white hover:scale-105 transition-all duration-300 rounded-2xl shadow-lg p-10 flex flex-col items-center justify-center overflow-hidden">
-              <div className="relative w-48 h-48 flex items-center justify-center">
-                <img
-                  src={javascript}
-                  alt="JavaScript"
-                  className="w-40 h-40 object-contain transition-all duration-500 ease-in-out hover:scale-125 hover:brightness-200"
-                />
-              </div>
-            </div>
-
-            {/* Box 6 */}
-            <div className="relative bg-transparent border-2 border-transparent hover:border-white hover:scale-105 transition-all duration-300 rounded-2xl shadow-lg p-10 flex flex-col items-center justify-center overflow-hidden">
-              <div className="relative w-48 h-48 flex items-center justify-center">
-                <img
-                  src={vite}
-                  alt="Vite"
-                  className="w-40 h-40 object-contain transition-all duration-500 ease-in-out hover:scale-125 hover:brightness-200"
-                />
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      <section className="py-16 text-center">
-        <h2 className="text-5xl font-bold mb-10">
+      {/* Tools Section */}
+      <section className="py-16 text-center px-4 sm:px-10">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10">
           <span className="text-teal-400">Tools </span>
           <span className="text-white">I Use</span>
         </h2>
 
-        {/* Skill Set Boxes - 2 Rows with 3 Boxes Centered Each */}
-        <div className="flex flex-col items-center gap-10 px-10 md:px-20">
-          {/* 🔹 Row 1 */}
-          <div className="flex flex-wrap justify-center gap-8">
-            {/* Box 1 */}
-            <div className="relative bg-transparent border-2 border-transparent hover:border-white hover:scale-105 transition-all duration-300 rounded-2xl shadow-lg p-10 flex flex-col items-center justify-center overflow-hidden">
-              <div className="relative w-48 h-48 flex items-center justify-center">
-                <img
-                  src={npms}
-                  alt="npm"
-                  className="w-40 h-40 object-contain transition-all duration-500 ease-in-out hover:scale-125 hover:brightness-200"
-                />
-              </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 justify-items-center">
+          {[npms, visuals, github, jsons].map((tool, i) => (
+            <div
+              key={i}
+              className="bg-transparent border-2 border-transparent hover:border-white hover:scale-105 transition-all duration-300 rounded-2xl shadow-lg p-6 sm:p-10 flex items-center justify-center"
+            >
+              <img
+                src={tool}
+                alt="Tool"
+                className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 object-contain transition-all duration-500 ease-in-out hover:scale-125 hover:brightness-200"
+              />
             </div>
-
-            {/* Box 2 */}
-            <div className="relative bg-transparent border-2 border-transparent hover:border-white hover:scale-105 transition-all duration-300 rounded-2xl shadow-lg p-10 flex flex-col items-center justify-center overflow-hidden">
-              <div className="relative w-48 h-48 flex items-center justify-center">
-                <img
-                  src={visuals}
-                  alt="HTML5"
-                  className="w-40 h-40 object-contain transition-all duration-500 ease-in-out hover:scale-125 hover:brightness-200"
-                />
-              </div>
-            </div>
-
-            {/* Box 3 */}
-            <div className="relative bg-transparent border-2 border-transparent hover:border-white hover:scale-105 transition-all duration-300 rounded-2xl shadow-lg p-10 flex flex-col items-center justify-center overflow-hidden">
-              <div className="relative w-48 h-48 flex items-center justify-center">
-                <img
-                  src={github}
-                  alt="CSS3"
-                  className="w-40 h-40 object-contain transition-all duration-500 ease-in-out hover:scale-125 hover:brightness-200"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* 🔹 Row 2 */}
-          <div className="flex flex-wrap justify-center gap-8">
-            {/* Box 4 */}
-            <div className="relative bg-transparent border-2 border-transparent hover:border-white hover:scale-105 transition-all duration-300 rounded-2xl shadow-lg p-10 flex flex-col items-center justify-center overflow-hidden">
-              <div className="relative w-48 h-48 flex items-center justify-center">
-                <img
-                  src={jsons}
-                  alt="Tailwind"
-                  className="w-40 h-40 object-contain transition-all duration-500 ease-in-out hover:scale-125 hover:brightness-200"
-                />
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* Footer */}
-      <Footer/>
-
+      <Footer />
     </div>
   );
 }
