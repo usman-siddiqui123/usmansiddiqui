@@ -6,7 +6,6 @@ import temp3 from "../assets/temp3.jpg";
 import temp4 from "../assets/temp4.jpg";
 import temp5 from "../assets/temp6.jpg";
 import temp6 from "../assets/temp5.jpg";
-
 import Header from "../layout/header";
 import Footer from "../layout/footer";
 

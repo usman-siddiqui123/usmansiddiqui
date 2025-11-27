@@ -62,16 +62,16 @@ export default function Home() {
               className="text-purple-400"
               style={{ fontFamily: "arialsanssarif" }}
             >
-              INTRODUCE{" "}
+              INTRODUCE{""}
             </span>
             <span className="text-white">MYSELF</span>
           </h2>
 
           <p className="text-white text-base md:text-xl">
-            <span className="font-bold text-purple-400">Web development</span> captured my interest with its ability to create interactive and dynamic user experiences.
+            <span className="font-bold text-purple-400">Web Development</span> captured my interest with its ability to create interactive and dynamic user experiences.
           </p>
           <p className="text-white text-base md:text-xl">
-            I am proficient in <span className="font-bold text-purple-400">React.js, Vite, HTML, CSS, and JavaScript</span>, with hands-on experience in building responsive and high-performance web applications.
+            I am proficient in <span className="font-bold text-purple-400">React.js, Vite, HTML, CSS, and Javascript</span>, with hands-on experience in building responsive and high-performance web applications.
           </p>
           <p className="text-white text-base md:text-xl">
             My fields of interest include <span className="font-bold text-purple-400">Frontend Development and UI/UX design</span>, focusing on creating seamless and visually appealing interfaces.
